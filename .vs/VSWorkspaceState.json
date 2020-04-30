@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
+    "\\src\\components",
     "\\src\\containers"
   ],
-  "SelectedNode": "\\src\\containers\\App.js",
+  "SelectedNode": "\\src\\components\\Header.js",
   "PreviewInSolutionExplorer": false
 }
