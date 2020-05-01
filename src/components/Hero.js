@@ -11,8 +11,7 @@ function Hero() {
                         <h2>Shipping products worldwide!</h2>
                         <p>
                             Our products will be shipped to
-                            all countries at no cost!<br/>
-                            Limited time offer.
+                            all countries at no cost!
                         </p>
                     </div>
                     <img src={airplane} alt="airplane" />

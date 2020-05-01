@@ -5,6 +5,11 @@
 	outline: 0;
 }
 
+html {
+	/*Using the default font size of browsers (16px)*/
+	font-size: 100%;
+}
+
 /*=== header ===*/
 
 header {
@@ -12,7 +17,7 @@ header {
 }
 
 header img {
-	padding: 15px 0px;
+	padding: 1rem 0rem;
 }
 
 .header-container {
@@ -36,9 +41,9 @@ header nav ul li a {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 1rem;
 	font-weight: bold;
-	padding: 35px 24px;
+	padding: 2rem 1.5rem;
 	transition: all 250ms linear 0s;
 }
 
@@ -48,8 +53,16 @@ header nav ul li a:hover {
 
 /* === HERO === */
 
+.hero-section {
+	height: 50vh;
+	display: flex;
+	/*to center flexed items top/bottom */
+	align-items: center;
+}
+
 .hero-section img {
-	width: 400px;
+	/*400px image*/
+	width: 25rem;
 }
 
 
@@ -68,25 +81,29 @@ header nav ul li a:hover {
 }
 
 .hero-section h2 {
-	font-size: 36px;
-	line-height: 55px;
+	font-size: 2rem;
+	line-height: 4rem;
 }
 
 .hero-section p {
 	color: #727272;
-	font-size: 18px;
-	line-height: 45px;
+	font-size: 1rem;
+	line-height: 2rem;
 }
 
 /* === FOOTER === */
 
 footer div {
+	height: 50vh;
+	/*to center text vertically (use same as height value)*/
+	line-height: 50vh;
 	text-align: center;
-	font-size: 18px;
+	font-size: 1rem;
 	color: #ffffff;
-	padding: 80px 0px;
 	background-color: #393939;
+	margin: auto;
 }
+
 
 /* MEDIA QUERIES */
 
@@ -98,6 +115,46 @@ footer div {
 		text-align: center;
 	}
 
+	/* So image want touch text when flexing vertically*/
+	.hero-section h2 {
+		padding-top: 2rem;
+	}
 
+	.hero-container img {
+		order: -1;
+	}
+}
 
+@media (max-height: 720px) {
+	.hero-section {
+		height: 720px;
+	}
+	footer div {
+		height: 400px;
+
+	}
+
+}
+
+@media (max-width: 710px) {
+	nav {
+		display: none;
+	}
+}
+
+@media (max-width: 410px) {
+	.hero-container img {
+		width: 100vw;
+	}
+
+	.hero-section h2 {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		padding-bottom: 1rem;
+	}
+
+	.hero-section p {
+		font-size: 0,8rem;
+		line-height: 1rem;
+	}
 }
