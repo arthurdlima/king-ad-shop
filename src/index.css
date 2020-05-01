@@ -18,7 +18,7 @@ header img {
 .header-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	width: 980px;
 	margin: auto;
 }
@@ -47,6 +47,11 @@ header nav ul li a:hover {
 
 /* === HERO === */
 
+.hero-section img {
+	width: 400px;
+}
+
+
 .hero-container {
 	display: flex;
 	/*to center flexed items top/bottom */
@@ -54,6 +59,7 @@ header nav ul li a:hover {
 	/*to center items left/right*/
 	width: 980px;
 	margin: auto;
+	justify-content: space-between;
 }
 .hero-section {
 	margin: 100px 0px;
@@ -61,13 +67,13 @@ header nav ul li a:hover {
 
 .hero-section h2 {
 	font-size: 36px;
-	line-height: 46px;
+	line-height: 55px;
 }
 
 .hero-section p {
 	color: #727272;
 	font-size: 18px;
-	line-height: 32px;
+	line-height: 45px;
 }
 
 /* === FOOTER === */
@@ -78,5 +84,19 @@ footer div {
 	color: #ffffff;
 	padding: 80px 0px;
 	background-color: #393939;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+	.hero-container {
+		flex-direction: column;
+	}
+	.hero-container div {
+		text-align: center;
+	}
+
+
+
 }
 

@@ -11,11 +11,11 @@ function Hero() {
                         <h2>Shipping products worldwide!</h2>
                         <p>
                             All our products will be shipped to
-                            your country of choice at no cost!
-                            Limited time offer!
+                            all countries at no cost!<br/>
+                            Limited time offer.
                         </p>
                     </div>
-                    <img src={airplane} width="500px" alt="airplane" />
+                    <img src={airplane} alt="airplane" />
                 </div>
             </section>
         </Fragment>
