@@ -18,8 +18,9 @@ header img {
 .header-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
-	width: 980px;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 1000px;
 	margin: auto;
 }
 
@@ -57,7 +58,8 @@ header nav ul li a:hover {
 	/*to center flexed items top/bottom */
 	align-items: center;
 	/*to center items left/right*/
-	width: 980px;
+	width: 90%;
+	max-width: 1000px;
 	margin: auto;
 	justify-content: space-between;
 }
@@ -99,4 +101,3 @@ footer div {
 
 
 }
-

@@ -10,7 +10,7 @@ function Hero() {
                     <div>
                         <h2>Shipping products worldwide!</h2>
                         <p>
-                            All our products will be shipped to
+                            Our products will be shipped to
                             all countries at no cost!<br/>
                             Limited time offer.
                         </p>
