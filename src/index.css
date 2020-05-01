@@ -140,6 +140,80 @@ footer div {
 	nav {
 		display: none;
 	}
+	
+	.nav-toggle .one,.two,.three {
+		background-color: white;
+		height: 5px;
+		width: 100%;
+		margin: 6px auto;
+
+		transition-duration: 0.3s;
+	}
+
+	.nav-toggle {
+		width: 40px;
+		height: 30px;
+		margin-right: 20px;
+	}
+
+	.nav-section.on {
+		/*background-color to take the view width and height. Using
+		position absolute to remove the background color from the 
+		documento flow and position top, left because thats where
+		the html elements start its position from.
+		*/
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100vw;
+		height: 100vh;
+
+		background-color: #1d1c56;
+		/*to keep the background element on top of everything else*/
+		z-index: 10;
+
+		/*to center nav*/
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nav-section.on nav {
+		display: block;
+	}
+
+	.nav-section.on .nav-toggle {
+		position: absolute;
+		right: 15px;
+		top: 25px;
+	}
+
+	/*menu appearance -> 3 bars to x shape*/
+	.nav-section.on .nav-toggle .one {
+		transform: rotate(45deg) translate(7px, 7px);
+	}
+	.nav-section.on .nav-toggle .two {
+		opacity: 0;
+	}
+	.nav-section.on .nav-toggle .three {
+		transform: rotate(-45deg) translate(8px, -9px);
+	}
+
+	/* nav items to vertical display*/
+	.nav-section.on nav ul {
+		text-align: center;
+		display: block;
+	}
+
+	.nav-section.on nav ul a {
+		transition-duration: 0.5s;
+		font-size: 3rem;
+		line-height: 8rem;
+		display: block;
+	}
+
 }
 
 @media (max-width: 410px) {

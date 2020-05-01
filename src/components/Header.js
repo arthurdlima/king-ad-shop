@@ -8,7 +8,12 @@ function Header() {
             <header>
                 <div className='header-container'>
                     <img src={Logo} alt="King AD Shop Logo" />
-                    <div>
+                    <div className='nav-section on'>
+                        <div className='nav-toggle'>
+                            <div className='one'></div>
+                            <div className='two'></div>
+                            <div className='three'></div>
+                        </div>
                         <nav>
                             <ul>
                                 <li>
