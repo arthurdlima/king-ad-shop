@@ -3,6 +3,35 @@ import { Fragment } from 'react';
 import Logo from './kingLogo.png';
 
 function Header() {
+
+
+    /*
+     
+     { showNav } = this.props;
+
+     let applyNavClass = "";
+
+     function handleNav {
+        newNav = !showNav;
+
+        if(newNav) {
+            document.body.style.overflow = "hidden";
+            applyNavClass = "on";
+        } else {
+            document.body.style.overflow = "initial";
+            applyNavClass = "";
+        }
+        
+        (do something to update redux showNav state, then exit function)
+
+        remember to use -> className= 'nav-section ${applyNavClass}' onClick ={handleNav}
+    } 
+     
+     */
+
+
+ 
+
     return (
         <Fragment>
             <header>
