@@ -140,7 +140,7 @@ footer div {
 	nav {
 		display: none;
 	}
-	
+
 	.nav-toggle .one,.two,.three {
 		background-color: white;
 		height: 5px;
@@ -157,19 +157,18 @@ footer div {
 	}
 
 	.nav-section.on {
-		/*background-color to take the view width and height. Using
-		position absolute to remove the background color from the 
-		documento flow and position top, left because thats where
-		the html elements start its position from.
+		/*width 100vw and height 100vh to take the view width and height. Using
+		position absolute to remove from the documento flow and position top, left
+		because thats where the html elements start its position from.
 		*/
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 
 		width: 100vw;
 		height: 100vh;
 
-		background-color: #1d1c56;
+		background-color: rgba(29,28,86,0.9);
 		/*to keep the background element on top of everything else*/
 		z-index: 10;
 
@@ -178,6 +177,8 @@ footer div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+
 	}
 
 	.nav-section.on nav {

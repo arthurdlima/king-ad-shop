@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\containers"
+    "\\src\\redux",
+    "\\src\\redux\\nav"
   ],
-  "SelectedNode": "\\src\\containers\\App.js",
+  "SelectedNode": "\\src\\redux\\nav\\navReducer.js",
   "PreviewInSolutionExplorer": false
 }
