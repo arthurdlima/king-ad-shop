@@ -65,6 +65,14 @@ header nav ul li a:hover {
 	width: 25rem;
 }
 
+/* === PRODUCTS === */
+
+.products-section {
+	height: 50vh;
+}
+.products-container {
+
+}
 
 .hero-container {
 	display: flex;

@@ -5,7 +5,7 @@ import Logo from './kingLogo.png';
 import { useSelector, useDispatch } from 'react-redux';
 
 //To use on dispatcher to change state
-import { showNav } from '../redux/nav/navActions';
+import { showNav, pageRoute } from '../redux/nav/navActions';
 
 function Header() {
 
@@ -13,14 +13,14 @@ function Header() {
     const dispatch = useDispatch();
 
     //To update nav visiblity based on css
-    let navCss = navVisible == true ? "on" : "";
-
+    let navCss = navVisible == true ? "nav-section on" : "nav-section";
+    console.log(navCss);
     return (
         <Fragment>
             <header>
                 <div className='header-container'>
                     <img src={Logo} alt="King AD Shop Logo" />
-                    <div className={'nav-section '+navCss}>
+                    <div className={navCss}>
                         <div onClick={()=> dispatch(showNav())} className='nav-toggle'>
                             <div className='one'></div>
                             <div className='two'></div>
@@ -29,10 +29,16 @@ function Header() {
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a onClick={() => {
+                                        dispatch(pageRoute('home'))
+                                        dispatch(showNav())
+                                    }} href="#">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">Products</a>
+                                    <a onClick={() => {
+                                        dispatch(pageRoute('products'))
+                                        dispatch(showNav())
+                                    }} href="#">Products</a>
                                 </li>
                                 <li>
                                     <a href="#">About</a>

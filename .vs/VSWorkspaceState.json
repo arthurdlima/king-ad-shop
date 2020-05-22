@@ -3,9 +3,10 @@
     "",
     "\\src",
     "\\src\\components",
+    "\\src\\containers",
     "\\src\\redux",
     "\\src\\redux\\nav"
   ],
-  "SelectedNode": "\\src\\redux\\nav\\navReducer.js",
+  "SelectedNode": "\\src\\components\\Header.js",
   "PreviewInSolutionExplorer": false
 }
