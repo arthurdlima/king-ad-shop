@@ -1,16 +1,15 @@
 import React from 'react';
-import { Fragment } from 'react';
+import SearchBox from './SearchBox';
 
 function ProductsSection() {
 
     return (
-        <Fragment>
-            <section className='products-section'>
-                <div className='products-container'>
-                    <p>Test products section!</p>
-                </div>
+        <div>
+            <SearchBox />
+            <section className='products-grid'>
+
             </section>
-        </Fragment>
+        </div>
     );
 }
 

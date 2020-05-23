@@ -27,6 +27,7 @@ header img {
 	width: 90%;
 	max-width: 1000px;
 	margin: auto;
+	margin-bottom: 2rem;
 }
 
 header nav ul {
@@ -65,14 +66,27 @@ header nav ul li a:hover {
 	width: 25rem;
 }
 
+
+/* === SEARCHBOX -> PRODUCTS === */
+
+.search-div {
+	text-align: center;
+}
+.search-div button {
+	font-size: 1.5rem;
+}
+.search-div input {
+	font-size: 1.5rem;
+}
+
 /* === PRODUCTS === */
 
-.products-section {
-	height: 50vh;
+.products-grid {
+	height: 50vh; 
 }
-.products-container {
 
-}
+
+
 
 .hero-container {
 	display: flex;
@@ -85,7 +99,7 @@ header nav ul li a:hover {
 	justify-content: space-between;
 }
 .hero-section {
-	margin: 100px 0px;
+	margin: 5rem 0px;
 }
 
 .hero-section h2 {

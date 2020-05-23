@@ -3,10 +3,11 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\containers",
-    "\\src\\redux",
+    "\\src\\components\\products",
+    "\\src\\products-data",
+    "\\src\\products-data\\images\\1-watches",
     "\\src\\redux\\nav"
   ],
-  "SelectedNode": "\\src\\components\\Header.js",
+  "SelectedNode": "\\src\\components\\products\\ProductsSection.js",
   "PreviewInSolutionExplorer": false
 }

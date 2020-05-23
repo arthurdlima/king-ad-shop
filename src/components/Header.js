@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fragment } from 'react';
 import Logo from './kingLogo.png';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,42 +15,40 @@ function Header() {
     let navCss = navVisible == true ? "nav-section on" : "nav-section";
     console.log(navCss);
     return (
-        <Fragment>
-            <header>
-                <div className='header-container'>
-                    <img src={Logo} alt="King AD Shop Logo" />
-                    <div className={navCss}>
-                        <div onClick={()=> dispatch(showNav())} className='nav-toggle'>
-                            <div className='one'></div>
-                            <div className='two'></div>
-                            <div className='three'></div>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a onClick={() => {
-                                        dispatch(pageRoute('home'))
-                                        dispatch(showNav())
-                                    }} href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a onClick={() => {
-                                        dispatch(pageRoute('products'))
-                                        dispatch(showNav())
-                                    }} href="#">Products</a>
-                                </li>
-                                <li>
-                                    <a href="#">About</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
+        <header>
+            <div className='header-container'>
+                <img src={Logo} alt="King AD Shop Logo" />
+                <div className={navCss}>
+                    <div onClick={()=> dispatch(showNav())} className='nav-toggle'>
+                        <div className='one'></div>
+                        <div className='two'></div>
+                        <div className='three'></div>
                     </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a onClick={() => {
+                                    dispatch(pageRoute('home'))
+                                    dispatch(showNav())
+                                }} href="#">Home</a>
+                            </li>
+                            <li>
+                                <a onClick={() => {
+                                    dispatch(pageRoute('products'))
+                                    dispatch(showNav())
+                                }} href="#">Products</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-        </Fragment>
+            </div>
+        </header>
     );
 }
 
