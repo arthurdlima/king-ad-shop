@@ -1,0 +1,29 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"Name": "watches",
+			"brands": [
+				{
+					"id": 111,
+					"brand": "Best Time",
+					"img": "./images/1-watches/watch_1_large.jpg",
+					"thumbnail": "./images/1-watches/watch_1_small.jpg"
+				},
+				{
+					"id": 222,
+					"brand": "Time RXZ",
+					"img": "./images/1-watches/watch_2_large.jpg",
+					"thumbnail": "./images/1-watches/watch_2_small.jpg"
+				},
+				{
+					"id": 333,
+					"brand": "the T.I.M.E",
+					"img": ".images/1-watches/watch_3_large.jpg",
+					"thumbnail": "./images/1-watches/watch_3_small.jpg"
+				}
+
+			]
+		}
+	]
+}
