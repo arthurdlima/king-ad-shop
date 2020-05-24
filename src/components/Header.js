@@ -12,8 +12,22 @@ function Header() {
     const dispatch = useDispatch();
 
     //To update nav visiblity based on css
-    let navCss = navVisible == true ? "nav-section on" : "nav-section";
+    let sWidth = window.screen.width;
+    //let navCss = (navVisible == true && sWidth <= 710) ? "nav-section on" : "nav-section";
+    let navCss;
+    let removeOnPageChange;
+
+    if (navVisible == true && sWidth <= 710) {
+        navCss = 'nav-section on';
+        removeOnPageChange = dispatch;
+    } else {
+        navCss = 'nav-section';
+        removeOnPageChange = function () { };
+    }
+
+
     console.log(navCss);
+    console.log(removeOnPageChange);
     return (
         <header>
             <div className='header-container'>
@@ -29,13 +43,13 @@ function Header() {
                             <li>
                                 <a onClick={() => {
                                     dispatch(pageRoute('home'))
-                                    dispatch(showNav())
+                                    removeOnPageChange(showNav());
                                 }} href="#">Home</a>
                             </li>
                             <li>
                                 <a onClick={() => {
                                     dispatch(pageRoute('products'))
-                                    dispatch(showNav())
+                                    removeOnPageChange(showNav());
                                 }} href="#">Products</a>
                             </li>
                             <li>
