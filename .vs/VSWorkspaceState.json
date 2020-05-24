@@ -1,13 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\products-data",
     "\\src",
     "\\src\\components",
     "\\src\\components\\products",
-    "\\src\\products-data",
-    "\\src\\products-data\\images\\1-watches",
+    "\\src\\containers",
+    "\\src\\redux",
     "\\src\\redux\\nav"
   ],
-  "SelectedNode": "\\src\\components\\products\\ProductsSection.js",
+  "SelectedNode": "\\src\\components\\Header.js",
   "PreviewInSolutionExplorer": false
 }

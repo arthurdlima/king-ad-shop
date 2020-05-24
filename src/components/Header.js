@@ -12,7 +12,7 @@ function Header() {
     const dispatch = useDispatch();
 
     //To update nav visiblity based on css
-    let sWidth = window.screen.width;
+    let sWidth = window.innerWidth;
     //let navCss = (navVisible == true && sWidth <= 710) ? "nav-section on" : "nav-section";
     let navCss;
     let removeOnPageChange;
