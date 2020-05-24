@@ -81,6 +81,43 @@ header nav ul li a:hover {
 
 /* === PRODUCTS === */
 
+.product {
+	text-align: center;
+	width: 10rem;
+	height: 15rem;
+	border-radius: 1rem;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+				0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+
+.product div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+
+}
+
+
+.product p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.product img {
+	display: block;
+	border-radius: 1rem 1rem 0 0;
+	width: 100%;
+	height: 60%;
+	background-color: #727272;
+}
+
+.product:hover {
+	transform: translateY(-7px);
+}
+
 .products-grid {
 	height: 50vh; 
 }
