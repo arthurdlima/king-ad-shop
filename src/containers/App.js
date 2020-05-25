@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 function App() {
 
     const pageRoute = useSelector(state => state.pageRoute);
-    let routeToRender = '';
+    let routeToRender;
 
     if (pageRoute == 'home') {
         routeToRender = <Hero />;

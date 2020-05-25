@@ -3,22 +3,47 @@ import SearchBox from './SearchBox';
 import Product from './Product';
 
 function ProductsSection() {
-    const result = getProducts();
+
+    const componentsArray = getProducts();
+
 
     return (
         <div>
             <SearchBox />
             <section className='products-grid'>
-                <Product />
+                {}
             </section>
         </div>
     );
 }
 
 function getProducts(someSearchText) {
-    fetch('http://localhost:3000/products-data/product-list.json')
-        .then(res => res.json())
-        .then(data => console.log(data));
+
+    const brandsArray = fetch('http://localhost:3000/products-data/product-list.json')
+                            .then(res => res.json())
+                            .then(data => {
+                                const d = data.products[0].brands;
+                                return productsToComponents(d);
+                            });
+
+    return brandsArray;
+}
+
+function productsToComponents(productsArray) {
+
+    const componentsArray = productsArray.map(brand => {
+
+        return (
+            <Product key={brand.id}
+                brand={brand.brand}
+                thumbnail={brand.thumbnail}
+                img={brand.img}
+                price={brand.price}
+            />
+        );
+    });
+   
+    return <div>{componentsArray}</div>;
 }
 
 
