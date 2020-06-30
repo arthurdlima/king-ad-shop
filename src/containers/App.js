@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
 
-    const pageRoute = useSelector(state => state.pageRoute);
+    const pageRoute = useSelector(state => state.navReducer.pageRoute);
     let routeToRender;
 
     if (pageRoute == 'home') {

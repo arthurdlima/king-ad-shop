@@ -8,18 +8,17 @@ import { showNav, pageRoute } from '../redux/nav/navActions';
 
 function Header() {
 
-    const navVisible = useSelector(state => state.navVisible);
+    const navVisible = useSelector(state => state.navReducer.navVisible);
     const dispatch = useDispatch();
 
     //To update nav visiblity based on css
     let sWidth = window.innerWidth;
     //let navCss = (navVisible == true && sWidth <= 710) ? "nav-section on" : "nav-section";
     let navCss;
-    let removeOnPageChange;
+    let removeOnPageChange = useDispatch();
 
     if (navVisible == true && sWidth <= 710) {
         navCss = 'nav-section on';
-        removeOnPageChange = dispatch;
     } else {
         navCss = 'nav-section';
         removeOnPageChange = function () { };

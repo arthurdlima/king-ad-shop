@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
-import navReducer from './nav/navReducer';
+import { rootReducer } from './rootReducer';
 
-const store = createStore(navReducer);
+
+const store = createStore(rootReducer);
 
 export default store;

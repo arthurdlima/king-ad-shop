@@ -11,14 +11,14 @@ export const fetchProductsRequest = () => {
     }
 }
 
-export const fetchProductsSuccess = products => {
+const fetchProductsSuccess = products => {
     return {
         type: FETCH_PRODUCTS_SUCCESS,
         payload: products
     }
 }
 
-export const fetchProductsFailure = error => {
+const fetchProductsFailure = error => {
     return {
         type: FETCH_PRODUCTS_FAILURE,
         payload: error

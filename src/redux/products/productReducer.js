@@ -29,7 +29,8 @@ const productReducer = (state = initialState, action) => {
                 products: [],
                 error: action.payload
             }
+        default: return state;
     }
 }
 
-export default reducer;
+export default productReducer;
