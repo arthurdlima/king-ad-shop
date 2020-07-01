@@ -52,6 +52,23 @@ header nav ul li a:hover {
     background: rgba(255,255,255, 0.5);
 }
 
+/* === shopping cart === */
+.cart-container {
+	position: relative;
+}
+
+.cart-container img {
+	position: absolute;
+	right: .6rem;
+	top: 1.5rem;
+	width: 2rem;
+}
+.cart-container div {
+	position: absolute;
+	left: 1.3rem;
+	top: 1.8rem;
+}
+
 /* === HERO === */
 
 .hero-section {

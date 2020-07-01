@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './kingLogo.png';
+import CartImg from './shoppingCart.png';
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -57,6 +58,12 @@ function Header() {
                             <li>
                                 <a href="#">Contact</a>
                             </li>
+                            <li>
+                                <a href="#" className='cart-container'>
+                                    <div>0</div>
+                                    <img src={CartImg} alt="Shopping cart" />
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -64,40 +71,5 @@ function Header() {
         </header>
     );
 }
-
-
-
-
-
-
-
-
-/*
-
- { navVisible } = this.props;
-
- let applyNavClass = "";
-
- function handleNav {
-    vai iniciar em falso. Após clicar botão, trocar para true
-    e fazer a mudança no css
-
-    newNav = !navVisible;
-                           
-    if(newNav) {
-        document.body.style.overflow = "hidden";
-        applyNavClass = "on";
-    } else {
-        document.body.style.overflow = "initial";
-        applyNavClass = "";
-    }
-   
-    (do something to update redux showNav state, then exit function)
-
-    remember to use -> className= 'nav-section ${applyNavClass}' onClick ={handleNav}
-}
-
- */
-
 
 export default Header;
