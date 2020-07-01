@@ -5,11 +5,12 @@
     "\\public\\products-data",
     "\\src",
     "\\src\\components",
+    "\\src\\components\\products",
     "\\src\\containers",
     "\\src\\redux",
     "\\src\\redux\\nav",
     "\\src\\redux\\products"
   ],
-  "SelectedNode": "\\public\\products-data\\product-list.json",
+  "SelectedNode": "\\src\\components\\products\\ProductsSection.js",
   "PreviewInSolutionExplorer": false
 }

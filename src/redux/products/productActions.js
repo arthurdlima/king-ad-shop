@@ -24,3 +24,18 @@ const fetchProductsFailure = error => {
         payload: error
     }
 }
+
+export const fetchProducts = () => {
+    return (dispatch) => {
+        dispatch(fetchProductsRequest);
+        fetch('http://localhost:3000/products-data/product-list.json')
+            .then(response => response.json())
+            .then(res => {
+                const products = res.products[0].brands;
+                dispatch(fetchProductsSuccess(products));
+            })
+            .catch(error => {
+                dispatch(fetchProductsFailure(error));
+        });
+    }
+}
