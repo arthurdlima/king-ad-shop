@@ -16,6 +16,7 @@ function CartSection() {
                 <div className='cart-flex'>
                     {cartCompArray}
                 </div>
+                <div id='cart-total'>total: $100</div>
             </section>
         );
     } else {

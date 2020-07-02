@@ -74,6 +74,8 @@ header nav ul li a:hover {
 .cart-section {
 	width: 90vw;
 	margin: 2rem auto;
+	/*to fix "total" at bottom*/
+	padding-bottom: 2rem;
 	background-color: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
 				0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -90,6 +92,11 @@ header nav ul li a:hover {
 }
 .cart-item p {
 	font-size: 1.5rem;
+}
+
+#cart-total {
+	text-align: center;
+	font-size: 2rem;
 }
 
 .cart-btn {
@@ -343,7 +350,27 @@ footer div {
 
 }
 
+@media (max-width: 500px) {
+	.cart-item {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.cart-item img {
+		width: 8rem;
+	}
+	.cart-item p {
+		font-size: .8rem;
+	}
+
+	.cart-btn {
+		padding: 3.5rem .2rem;
+	}
+}
+
 @media (max-width: 410px) {
+
 	.hero-container img {
 		width: 100vw;
 	}
