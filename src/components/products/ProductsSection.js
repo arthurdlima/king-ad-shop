@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchProducts } from '../../redux/products/productActions';
 // for cart state
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, removeFromCart } from '../../redux/cart/cartActions';
+import { addToCart } from '../../redux/cart/cartActions';
 
 import SearchBox from './SearchBox';
 import Product from './Product';
@@ -79,7 +79,6 @@ function productsToComponents(productsArray, cartDispatch) {
 }
 
 function prodCompItem (brandId, productsArray, cartDispatch) {
-
     productsArray.map(prod => {
         if(prod.id === brandId) {
             cartDispatch(addToCart(prod));

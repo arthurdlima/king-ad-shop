@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductsSection from '../components/products/ProductsSection';
 import Footer from '../components/Footer';
+import CartSection from '../components/cartSection/CartSection'
 
 import { useSelector } from 'react-redux';
 
@@ -18,6 +19,8 @@ function App() {
         routeToRender = <Hero />;
     } else if (pageRoute === 'products') {
         routeToRender = <ProductsSection />;
+    } else if (pageRoute === 'cart') {
+        routeToRender = <CartSection />;
     } else {
         routeToRender = '';
     }

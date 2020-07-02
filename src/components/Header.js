@@ -60,7 +60,11 @@ function Header() {
                                 <a href="#">Contact</a>
                             </li>
                             <li>
-                                <a href="#" className='cart-container'>
+                                <a onClick={() => {
+                                        dispatch(pageRoute('cart'))
+                                        removeOnPageChange(showNav());
+                                    }}
+                                    href="#" className='cart-container'>
                                     <div>{cartNum}</div>
                                     <img src={CartImg} alt="Shopping cart" />
                                 </a>

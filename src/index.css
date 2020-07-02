@@ -52,7 +52,7 @@ header nav ul li a:hover {
     background: rgba(255,255,255, 0.5);
 }
 
-/* === shopping cart === */
+/* === shopping cart icon === */
 .cart-container {
 	position: relative;
 }
@@ -67,6 +67,33 @@ header nav ul li a:hover {
 	position: absolute;
 	left: 1.3rem;
 	top: 1.4rem;
+}
+
+
+/* === shopping cart === */
+.cart-section {
+	width: 90vw;
+	margin: 2rem auto;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+				0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 0.3s ease 0s;
+}
+.cart-section:hover {
+	transform: translateY(-7px);
+}
+.cart-item {
+	padding: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.cart-item p {
+	font-size: 1.5rem;
+}
+
+.cart-btn {
+	padding: 5.6rem .5rem;
 }
 
 /* === HERO === */
