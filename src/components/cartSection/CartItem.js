@@ -8,7 +8,7 @@ function CartItem(props) {
             <img src={thumbnail} alt='cart item' />
             <div>
                 <p>{brand}</p>
-                <p>{price}</p>
+                <p>${price}</p>
                 <p>amount {itemTypeCount}</p>
             </div>
             <div>

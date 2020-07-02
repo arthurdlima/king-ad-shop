@@ -1,9 +1,10 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from './theCart';
+import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_TOTAL } from './theCart';
 
 const initialState = {
     cart: [],
     itemTypeCount: [],
-    cartCount: 0
+    cartCount: 0,
+    total: 0
 }
 
 const cartReducer = (state = initialState, action) => {
@@ -34,7 +35,8 @@ const cartReducer = (state = initialState, action) => {
             return {
                 cart: [...state.cart, action.payload],
                 itemTypeCount: [...state.itemTypeCount, 1],
-                cartCount: state.cartCount + 1
+                cartCount: state.cartCount + 1,
+                total: state.total
             }
 
         case REMOVE_FROM_CART:
@@ -60,6 +62,11 @@ const cartReducer = (state = initialState, action) => {
                     }
                 }
             })
+        case UPDATE_TOTAL:
+            return {
+                ...state,
+                total: state.total + action.payload
+            }
         default: return state;
     }
 }

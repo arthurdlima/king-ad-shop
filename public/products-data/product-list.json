@@ -9,21 +9,21 @@
 					"brand": "Best Time",
 					"img": "products-data/images/1-watches/watch_1_large.jpg",
 					"thumbnail": "products-data/images/1-watches/watch_1_small.jpg",
-					"price": "$500"
+					"price": 500
 				},
 				{
 					"id": 222,
 					"brand": "Time RXZ",
 					"img": "products-data/images/1-watches/watch_2_large.jpg",
 					"thumbnail": "products-data/images/1-watches/watch_2_small.jpg",
-					"price": "$750"
+					"price": 750
 				},
 				{
 					"id": 333,
 					"brand": "the T.I.M.E",
 					"img": "products-data/images/1-watches/watch_3_large.jpg",
 					"thumbnail": "products-data/images/1-watches/watch_3_small.jpg",
-					"price": "$950"
+					"price": 950
 				}
 
 			]
