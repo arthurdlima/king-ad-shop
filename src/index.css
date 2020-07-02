@@ -60,13 +60,13 @@ header nav ul li a:hover {
 .cart-container img {
 	position: absolute;
 	right: .6rem;
-	top: 1.5rem;
+	top: 1.1rem;
 	width: 2rem;
 }
 .cart-container div {
 	position: absolute;
 	left: 1.3rem;
-	top: 1.8rem;
+	top: 1.4rem;
 }
 
 /* === HERO === */
@@ -145,9 +145,6 @@ header nav ul li a:hover {
 	padding: 5rem 0;
 }
 
-
-
-
 .hero-container {
 	display: flex;
 	/*to center flexed items top/bottom */
@@ -213,12 +210,11 @@ footer div {
 	}
 	footer div {
 		height: 400px;
-
 	}
 
 }
 
-@media (max-width: 710px) {
+@media (max-width: 815px) {
 	nav {
 		display: none;
 	}
@@ -260,7 +256,6 @@ footer div {
 		justify-content: center;
 		align-items: center;
 
-
 	}
 
 	.nav-section.on nav {
@@ -288,14 +283,36 @@ footer div {
 	.nav-section.on nav ul {
 		text-align: center;
 		display: block;
+		width: 80vw;
 	}
-
+	/* the new vertical nav properties */
 	.nav-section.on nav ul a {
 		transition-duration: 0.5s;
-		font-size: 3rem;
-		line-height: 8rem;
+		font-size: 2rem;
+		line-height: 4rem;
 		display: block;
 	}
+
+	.cart-container img {
+		position: relative;
+		top: 1rem;
+		left: -.2rem;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+		width: 2.5rem;
+	}
+	.cart-container div {
+		position: absolute;
+		top: 13%;
+		right: 0%;
+		left: 0%;
+		bottom: 0%;
+		padding: 0;
+		margin: 0;
+	}
+
 
 }
 

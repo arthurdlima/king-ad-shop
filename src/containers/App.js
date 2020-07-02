@@ -9,20 +9,18 @@ import Footer from '../components/Footer';
 
 import { useSelector } from 'react-redux';
 
-
 function App() {
 
     const pageRoute = useSelector(state => state.navReducer.pageRoute);
     let routeToRender;
 
-    if (pageRoute == 'home') {
+    if (pageRoute === 'home') {
         routeToRender = <Hero />;
-    } else if (pageRoute == 'products') {
+    } else if (pageRoute === 'products') {
         routeToRender = <ProductsSection />;
     } else {
         routeToRender = '';
     }
-
 
     return (
         <Fragment>

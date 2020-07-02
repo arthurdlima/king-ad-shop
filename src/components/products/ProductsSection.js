@@ -65,7 +65,6 @@ function productsToComponents(productsArray) {
     return componentsArray;
 }
 
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps

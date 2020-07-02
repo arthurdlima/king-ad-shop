@@ -14,17 +14,16 @@ function Header() {
 
     //To update nav visiblity based on css
     let sWidth = window.innerWidth;
-    //let navCss = (navVisible == true && sWidth <= 710) ? "nav-section on" : "nav-section";
+    //let navCss = (navVisible == true && sWidth <= 815) ? "nav-section on" : "nav-section";
     let navCss;
     let removeOnPageChange = useDispatch();
 
-    if (navVisible == true && sWidth <= 710) {
+    if (navVisible === true && sWidth <= 815) {
         navCss = 'nav-section on';
     } else {
         navCss = 'nav-section';
         removeOnPageChange = function () { };
     }
-
 
     console.log(navCss);
     console.log(removeOnPageChange);
