@@ -22,14 +22,15 @@ const cartReducer = (state = initialState, action) => {
                     break;
                 }
             }
-
-
             if(newState != undefined) {
+                window.alert('En: Product already in cart! So Quantity + 1'+
+                '\nPt: Produto já está no carrinho! Então quantidade + 1');
                 return newState;
             }
 
             // if the item is not in the cart, add
-
+            window.alert('En: Product added to cart!!!'+
+            '\nPt: Produto adicionado ao carrinho!!!');
             return {
                 cart: [...state.cart, action.payload],
                 itemTypeCount: [...state.itemTypeCount, 1],

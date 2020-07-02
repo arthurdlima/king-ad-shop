@@ -9,6 +9,8 @@ import { showNav, pageRoute } from '../redux/nav/navActions';
 
 function Header() {
 
+    const cartNum = useSelector(state => state.cartReducer.cartCount);
+
     const navVisible = useSelector(state => state.navReducer.navVisible);
     const dispatch = useDispatch();
 
@@ -59,7 +61,7 @@ function Header() {
                             </li>
                             <li>
                                 <a href="#" className='cart-container'>
-                                    <div>0</div>
+                                    <div>{cartNum}</div>
                                     <img src={CartImg} alt="Shopping cart" />
                                 </a>
                             </li>
