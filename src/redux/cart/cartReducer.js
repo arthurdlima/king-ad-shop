@@ -13,18 +13,19 @@ const cartReducer = (state = initialState, action) => {
             let newState;
             for(let i=0; i<state.cart.length;i++) {
                 if(state.cart[i].id === action.payload.id){
-                    console.log("im inside the if for loop!");
                     let itc = [...state.itemTypeCount];
                     itc[i] = itc[i] + 1;
                     newState = {
                         ...state,
-                        itemTypeCount: itc
+                        itemTypeCount: [...itc]
                     }
                     break;
                 }
             }
+
+
             if(newState != undefined) {
-                return state;
+                return newState;
             }
 
             // if the item is not in the cart, add
