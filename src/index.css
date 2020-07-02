@@ -71,6 +71,12 @@ header nav ul li a:hover {
 
 
 /* === shopping cart === */
+
+.cart-section h2 {
+	text-align: center;
+	padding: 5rem 0;
+}
+
 .cart-section {
 	width: 90vw;
 	margin: 2rem auto;
@@ -366,6 +372,10 @@ footer div {
 
 	.cart-btn {
 		padding: 3.5rem .2rem;
+	}
+	#cart-total {
+		text-align: center;
+		font-size: 1rem;
 	}
 }
 

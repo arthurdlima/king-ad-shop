@@ -6,7 +6,6 @@ import CartItem from './CartItem';
 function CartSection() {
 
     const cart = useSelector(state => state.cartReducer);
-    const cartDispatch = useDispatch();
     const cartCompArray = mapCartToComp(cart);
     console.log(cart);
 
@@ -22,7 +21,7 @@ function CartSection() {
     } else {
         return (
             <section className='cart-section'>
-                <h1> Cart is empty! </h1>
+                <h2> Cart is empty! </h2>
             </section>
         );
     }
@@ -34,6 +33,7 @@ function mapCartToComp(cartt) {
         return (
             <div key = {prod.id}>
                 <CartItem key={prod.id}
+                    id={prod.id}
                     brand={prod.brand}
                     thumbnail={prod.thumbnail}
                     price={prod.price}

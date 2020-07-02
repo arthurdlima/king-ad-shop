@@ -24,8 +24,6 @@ const cartReducer = (state = initialState, action) => {
                 }
             }
             if(newState != undefined) {
-                window.alert('En: Product already in cart! So Quantity + 1'+
-                '\nPt: Produto já está no carrinho! Então quantidade + 1');
                 return newState;
             }
 
@@ -41,32 +39,45 @@ const cartReducer = (state = initialState, action) => {
 
         case REMOVE_FROM_CART:
             // remove item from cart if item is LAST one
-            state.cart.map((inCart, index) => {
-                if (inCart.id === action.payload.id && state.itemTypeCount[index] === 1) {
+            let newState2;
+            for(let i=0; i<state.cart.length;i++) {
+                if(state.cart[i].id === action.payload.id && state.itemTypeCount[i] === 1){
                     let cartt = [...state.cart];
                     let itc = [...state.itemTypeCount];
-                    cartt.splice(index,1);
-                    itc.splice(index,1);
-                    return {
+                    cartt.splice(i,1);
+                    itc.splice(i,1);
+                    newState2 = {
                         cart: [...cartt],
                         itemTypeCount: [...itc],
-                        cartCount: state.cartCount - 1
+                        cartCount: state.cartCount - 1,
+                        total: state.total
                     }
-                } else if (inCart.id === action.payload.id) {
-                    // remove item from cart if there is MORE than one
+                    window.alert('En: Product removed from cart!!!'+
+                    '\nPt: Produto removido do carrinho!!!');
+                break;
+                // remove item amount from cart if more then 1
+                } else if (state.cart[i].id === action.payload.id && state.itemTypeCount[i] > 1) {
                     let itc = [...state.itemTypeCount];
-                    itc[index] = itc[index] - 1;
-                    return {
+                    itc[i] = itc[i]-1;
+                    newState2 = {
                         ...state,
-                        itemTypeCount: [...itc]
+                        itemTypeCount: [...itc],
                     }
+                    break;
                 }
-            })
+            }
+            if(newState2 != undefined) {
+                return newState2;
+            }
+            return state;
+
         case UPDATE_TOTAL:
+            console.log(action.payload);
             return {
                 ...state,
                 total: state.total + action.payload
             }
+
         default: return state;
     }
 }
