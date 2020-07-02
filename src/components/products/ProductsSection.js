@@ -1,11 +1,20 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../redux/products/productActions';
+// for cart state
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, removeFromCart } from '../../redux/cart/cartActions';
 
 import SearchBox from './SearchBox';
 import Product from './Product';
 
 function ProductsSection({ productObj, fetchProducts }) {
+
+    const cart = useSelector(state => state.cartReducer);
+    const cartDispatch = useDispatch();
+
+    console.log(cart);
+
     useEffect(() => {
         fetchProducts();
     }, [])
@@ -26,7 +35,7 @@ function ProductsSection({ productObj, fetchProducts }) {
             <div>{productObj.error}</div>
         );
     } else {
-        const prodCompArray = productsToComponents(productObj.products);
+        const prodCompArray = productsToComponents(productObj.products, cartDispatch);
         return (
             <div>
                 <SearchBox />
@@ -51,18 +60,31 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-function productsToComponents(productsArray) {
+function productsToComponents(productsArray, cartDispatch) {
     const componentsArray = productsArray.map(brand => {
         return (
-            <Product key={brand.id}
-                brand={brand.brand}
-                thumbnail={brand.thumbnail}
-                img={brand.img}
-                price={brand.price}
-            />
+            <div key = {brand.id} onClick={()=> {
+                    prodCompItem(brand.id, productsArray, cartDispatch);
+                }}>
+                <Product key={brand.id}
+                    brand={brand.brand}
+                    thumbnail={brand.thumbnail}
+                    img={brand.img}
+                    price={brand.price}
+                />
+            </div>
         );
     });
     return componentsArray;
+}
+
+function prodCompItem (brandId, productsArray, cartDispatch) {
+
+    productsArray.map(prod => {
+        if(prod.id === brandId) {
+            cartDispatch(addToCart(prod));
+        }
+    });
 }
 
 export default connect(
