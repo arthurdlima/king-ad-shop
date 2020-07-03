@@ -52,20 +52,20 @@ function Header() {
                                 <a onClick={() => {
                                     dispatch(pageRoute('products'))
                                     removeOnPageChange(showNav());
-                                }}>Products</a>
+                                }} href="#">Products</a>
                             </li>
                             <li>
-                                <a>About</a>
+                                <a href="#">About</a>
                             </li>
                             <li>
-                                <a>Contact</a>
+                                <a href="#">Contact</a>
                             </li>
                             <li>
                                 <a onClick={() => {
                                         dispatch(pageRoute('cart'))
                                         removeOnPageChange(showNav());
                                     }}
-                                     className='cart-container'>
+                                     className='cart-container' href="#">
                                     <div>{cartNum}</div>
                                     <img src={CartImg} alt="Shopping cart" />
                                 </a>
