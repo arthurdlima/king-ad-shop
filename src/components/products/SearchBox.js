@@ -4,13 +4,13 @@ import { updateSearchField, clearSearchField } from '../../redux/search/searchAc
 
 function SearchBox() {
     const searchDispatch = useDispatch();
-    const s = useSelector(state => state.searchReducer);
-    console.log(s)
 
     function searchProducts(event) {
         searchDispatch(updateSearchField(event));
     }
 
+    /* use hook with return function.
+    It's equal to class componentWillUnmount */
     useEffect(() => {
         return function cleanup () {
             searchDispatch(clearSearchField());

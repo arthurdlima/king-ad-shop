@@ -185,6 +185,10 @@ header nav ul li a:hover {
 	padding: 5rem 0;
 }
 
+.products-grid h2 {
+	text-align: center;
+}
+
 .hero-container {
 	display: flex;
 	/*to center flexed items top/bottom */

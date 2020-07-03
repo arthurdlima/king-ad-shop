@@ -9,9 +9,10 @@ import SearchBox from './SearchBox';
 import Product from './Product';
 
 function ProductsSection({ productObj, fetchProducts }) {
-
+    const searchState = useSelector(state => state.searchReducer.searchfield);
     const cart = useSelector(state => state.cartReducer);
     const cartDispatch = useDispatch();
+
     const test = useSelector(state => state);
     console.log(test);
 
@@ -35,7 +36,34 @@ function ProductsSection({ productObj, fetchProducts }) {
             <div>{productObj.error}</div>
         );
     } else {
-        const prodCompArray = productsToComponents(productObj.products, cartDispatch);
+        let prodCompArray;
+        // if user typed into searchfield, render results. Else, render all json.
+        if(searchState.length) {
+            const filteredProducts = productObj.products.filter(prod => {
+                return prod.brand.toLowerCase().includes(searchState.toLowerCase());
+            });
+            prodCompArray = productsToComponents(filteredProducts, cartDispatch);
+            console.log(prodCompArray)
+            if(prodCompArray.length === 0){
+                return (
+                    <div>
+                        <SearchBox />
+                        <section className='products-grid'>
+                            <h2> Oops.. no products found :( </h2>
+                        </section>
+                    </div>
+                );
+            }
+            return (
+                <div>
+                    <SearchBox />
+                    <section className='products-grid'>
+                        {prodCompArray}
+                    </section>
+                </div>
+            );
+        }
+        prodCompArray = productsToComponents(productObj.products, cartDispatch);
         return (
             <div>
                 <SearchBox />

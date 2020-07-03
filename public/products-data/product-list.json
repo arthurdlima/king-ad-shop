@@ -24,8 +24,42 @@
 					"img": "products-data/images/1-watches/watch_3_large.jpg",
 					"thumbnail": "products-data/images/1-watches/watch_3_small.jpg",
 					"price": 950
+				},
+				{
+					"id": 444,
+					"brand": "GM Watch",
+					"img": "products-data/images/1-watches/watch_4_large.jpg",
+					"thumbnail": "products-data/images/1-watches/watch_4_small.jpg",
+					"price": 880
+				},
+				{
+					"id": 555,
+					"brand": "DARK TIME",
+					"img": "products-data/images/1-watches/watch_5_large.jpg",
+					"thumbnail": "products-data/images/1-watches/watch_5_small.jpg",
+					"price": 1500
+				},
+				{
+					"id": 667,
+					"brand": "White WATCH",
+					"img": "products-data/images/1-watches/watch_6_large.jpg",
+					"thumbnail": "products-data/images/1-watches/watch_6_small.jpg",
+					"price": 200
+				},
+				{
+					"id": 777,
+					"brand": "AB-Platinum",
+					"img": "products-data/images/1-watches/watch_7_large.jpg",
+					"thumbnail": "products-data/images/1-watches/watch_7_small.jpg",
+					"price": 900
+				},
+				{
+					"id": 888,
+					"brand": "Smooth Time",
+					"img": "products-data/images/1-watches/watch_8_large.jpg",
+					"thumbnail": "products-data/images/1-watches/watch_8_small.jpg",
+					"price": 450
 				}
-
 			]
 		}
 	]
