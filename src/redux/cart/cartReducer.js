@@ -20,6 +20,8 @@ const cartReducer = (state = initialState, action) => {
                         ...state,
                         itemTypeCount: [...itc]
                     }
+                    window.alert('En: cart updated'+
+                    '\nPt: carrinho atualizado');
                     break;
                 }
             }
@@ -63,6 +65,8 @@ const cartReducer = (state = initialState, action) => {
                         ...state,
                         itemTypeCount: [...itc],
                     }
+                    window.alert('En: cart updated'+
+                    '\nPt: carrinho atualizado');
                     break;
                 }
             }
