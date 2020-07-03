@@ -4,7 +4,6 @@ import { addToCart, updateTotal, removeFromCart } from '../../redux/cart/cartAct
 
 function CartItem(props) {
     const { id, brand, thumbnail, price, itemTypeCount } = props;
-    console.log("props!!!",props)
     const btnDispatch = useDispatch();
 
     return (
@@ -28,7 +27,5 @@ function CartItem(props) {
         </div>
     );
 }
-
-
 
 export default CartItem;

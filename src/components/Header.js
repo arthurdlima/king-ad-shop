@@ -27,8 +27,6 @@ function Header() {
         removeOnPageChange = function () { };
     }
 
-    console.log(navCss);
-    console.log(removeOnPageChange);
     return (
         <header>
             <div className='header-container'>

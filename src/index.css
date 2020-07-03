@@ -1,9 +1,16 @@
 * {
+	font-family: Halva;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	outline: 0;
 }
+
+@font-face {
+	font-family: Halva;
+	src: url(Halva.otf);
+}
+
 
 html {
 	/*Using the default font size of browsers (16px)*/
@@ -43,7 +50,6 @@ header nav ul li a {
 	color: white;
 	text-transform: uppercase;
 	font-size: 1rem;
-	font-weight: bold;
 	padding: 2rem 1.5rem;
 	transition: all 250ms linear 0s;
 }
@@ -112,8 +118,9 @@ header nav ul li a:hover {
 /* === HERO === */
 
 .hero-section {
+	text-transform: uppercase;
 	text-align: center;
-	padding-top: 10rem;
+	padding-top: 8rem;
 	height: 50vh;
 	background-image: url('./components/bk.jpg');
 	background-position: center;
@@ -128,7 +135,7 @@ header nav ul li a:hover {
 }
 
 .hero-section p {
-	color: #727272;
+	color: darkgrey;
 	font-size: 1rem;
 	line-height: 2rem;
 }
@@ -139,10 +146,15 @@ header nav ul li a:hover {
 	padding-top: 2rem;
 	text-align: center;
 }
+
+.search-div input {
+	width: 60%;
+}
 .search-div button {
 	font-size: 1.5rem;
 }
 .search-div input {
+	text-align: center;
 	font-size: 1.5rem;
 }
 
@@ -220,7 +232,10 @@ footer div {
 @media (max-height: 720px) {
 	.hero-section {
 		height: 720px;
+		/*for hero text*/
+		padding-top: 20rem;
 	}
+
 	footer div {
 		height: 400px;
 	}

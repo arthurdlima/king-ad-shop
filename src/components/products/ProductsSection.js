@@ -13,9 +13,6 @@ function ProductsSection({ productObj, fetchProducts }) {
     const cart = useSelector(state => state.cartReducer);
     const cartDispatch = useDispatch();
 
-    const test = useSelector(state => state);
-    console.log(test);
-
     useEffect(() => {
         fetchProducts();
     }, [])

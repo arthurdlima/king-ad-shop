@@ -86,40 +86,4 @@ const cartReducer = (state = initialState, action) => {
     }
 }
 
-/*
-let array = {
-    n: "hi",
-    a: [1,2,3]
-}
-
-array.a.map((value,index) =>{
-    if(value === 3){
-        let b = [...array.a];
-        b[index] = 4;
-        array = {
-            ...array,
-            a: b
-        }
-    }
-})
-
-
-let array = {
-    n: "hi",
-    a: [1,2,3]
-}
-let b;
-
-array.a.map((value,index) =>{
-    if(value === 3){
-        let c = [...array.a];
-        c.splice(index,1);
-        b = {
-            ...array,
-            a: [...c]
-        }
-    }
-})
-*/
-
 export default cartReducer;

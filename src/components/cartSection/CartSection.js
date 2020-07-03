@@ -7,7 +7,6 @@ function CartSection() {
 
     const cart = useSelector(state => state.cartReducer);
     const cartCompArray = mapCartToComp(cart);
-    console.log(cart);
 
     if(cart.cartCount > 0) {
         return (
@@ -45,6 +44,5 @@ function mapCartToComp(cartt) {
     });
     return cartCompArray;
 }
-
 
 export default CartSection;

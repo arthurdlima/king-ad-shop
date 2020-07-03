@@ -3,7 +3,6 @@ import airplane from './airplane.jpg';
 
 function Hero() {
     return (
-
         <section className='hero-section'>
             <div>
                 <h2>Shipping products worldwide!</h2>
@@ -13,7 +12,6 @@ function Hero() {
                 </p>
             </div>
         </section>
-
     );
 }
 
