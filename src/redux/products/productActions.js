@@ -28,7 +28,7 @@ const fetchProductsFailure = error => {
 export const fetchProducts = () => {
     return (dispatch) => {
         dispatch(fetchProductsRequest);
-        fetch('http://localhost:3000/product-list')
+        fetch('./products-data/product-list.json')
             .then(response => response.json())
             .then(res => {
                 const products = res.products[0].brands;
