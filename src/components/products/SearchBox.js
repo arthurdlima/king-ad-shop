@@ -19,7 +19,7 @@ function SearchBox() {
 
     return (
         <div className='search-div'>
-            <input className='search-box'
+            <input 
                 type='search'
                 placeholder='search products'
                 onChange={searchProducts}

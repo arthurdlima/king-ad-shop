@@ -27,7 +27,7 @@ header img {
 	width: 90%;
 	max-width: 1000px;
 	margin: auto;
-	margin-bottom: 2rem;
+	margin-bottom: 0;
 }
 
 header nav ul {
@@ -112,21 +112,31 @@ header nav ul li a:hover {
 /* === HERO === */
 
 .hero-section {
+	text-align: center;
+	padding-top: 10rem;
 	height: 50vh;
-	display: flex;
-	/*to center flexed items top/bottom */
-	align-items: center;
+	background-image: url('./components/bk.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
 }
 
-.hero-section img {
-	/*400px image*/
-	width: 25rem;
+.hero-section h2 {
+	font-size: 2rem;
+	line-height: 4rem;
 }
 
+.hero-section p {
+	color: #727272;
+	font-size: 1rem;
+	line-height: 2rem;
+}
 
 /* === SEARCHBOX -> PRODUCTS === */
 
 .search-div {
+	padding-top: 2rem;
 	text-align: center;
 }
 .search-div button {
@@ -189,30 +199,6 @@ header nav ul li a:hover {
 	text-align: center;
 }
 
-.hero-container {
-	display: flex;
-	/*to center flexed items top/bottom */
-	align-items: center;
-	/*to center items left/right*/
-	width: 90%;
-	max-width: 1000px;
-	margin: auto;
-	justify-content: space-between;
-}
-.hero-section {
-	margin: 5rem 0px;
-}
-
-.hero-section h2 {
-	font-size: 2rem;
-	line-height: 4rem;
-}
-
-.hero-section p {
-	color: #727272;
-	font-size: 1rem;
-	line-height: 2rem;
-}
 
 /* === FOOTER === */
 
@@ -230,23 +216,6 @@ footer div {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1000px) {
-	.hero-container {
-		flex-direction: column;
-	}
-	.hero-container div {
-		text-align: center;
-	}
-
-	/* So image want touch text when flexing vertically*/
-	.hero-section h2 {
-		padding-top: 2rem;
-	}
-
-	.hero-container img {
-		order: -1;
-	}
-}
 
 @media (max-height: 720px) {
 	.hero-section {
@@ -384,10 +353,6 @@ footer div {
 }
 
 @media (max-width: 410px) {
-
-	.hero-container img {
-		width: 100vw;
-	}
 
 	.hero-section h2 {
 		font-size: 1.5rem;

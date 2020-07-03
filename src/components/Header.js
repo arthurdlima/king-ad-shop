@@ -32,7 +32,10 @@ function Header() {
     return (
         <header>
             <div className='header-container'>
-                <img src={Logo} alt="King AD Shop Logo" />
+                <img onClick={() => {
+                    dispatch(pageRoute('home'))
+                    removeOnPageChange(showNav());
+                }}src={Logo} alt="King AD Shop Logo" />
                 <div className={navCss}>
                     <div onClick={()=> dispatch(showNav())} className='nav-toggle'>
                         <div className='one'></div>
