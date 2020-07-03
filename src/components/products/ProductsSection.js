@@ -10,7 +10,6 @@ import Product from './Product';
 
 function ProductsSection({ productObj, fetchProducts }) {
     const searchState = useSelector(state => state.searchReducer.searchfield);
-    const cart = useSelector(state => state.cartReducer);
     const cartDispatch = useDispatch();
 
     useEffect(() => {

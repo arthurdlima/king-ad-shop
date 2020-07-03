@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateSearchField, clearSearchField } from '../../redux/search/searchActions';
 
 function SearchBox() {
@@ -19,7 +19,7 @@ function SearchBox() {
 
     return (
         <div className='search-div'>
-            <input 
+            <input
                 type='search'
                 placeholder='search products'
                 onChange={searchProducts}

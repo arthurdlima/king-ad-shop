@@ -25,7 +25,7 @@ const cartReducer = (state = initialState, action) => {
                     break;
                 }
             }
-            if(newState != undefined) {
+            if(newState !== undefined) {
                 return newState;
             }
 
@@ -70,7 +70,7 @@ const cartReducer = (state = initialState, action) => {
                     break;
                 }
             }
-            if(newState2 != undefined) {
+            if(newState2 !== undefined) {
                 return newState2;
             }
             return state;

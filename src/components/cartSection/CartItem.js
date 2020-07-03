@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addToCart, updateTotal, removeFromCart } from '../../redux/cart/cartActions';
 
 function CartItem(props) {
-    const { id, brand, thumbnail, price, itemTypeCount } = props;
+    const { brand, thumbnail, price, itemTypeCount } = props;
     const btnDispatch = useDispatch();
 
     return (
